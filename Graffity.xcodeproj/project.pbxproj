@@ -13,6 +13,12 @@
 		6B1ACC8D2CF5C1B40081C3E5 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC8C2CF5C1B40081C3E5 /* OrderModel.swift */; };
 		6B1ACC902CF5C2B10081C3E5 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC8F2CF5C2B10081C3E5 /* OrdersViewModel.swift */; };
 		6B1ACC932CF5C7060081C3E5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC922CF5C7060081C3E5 /* CoreDataManager.swift */; };
+		6B1ACC982CF5D3BA0081C3E5 /* OrderFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC962CF5D3BA0081C3E5 /* OrderFormViewController.swift */; };
+		6B1ACC992CF5D3BA0081C3E5 /* OrderFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1ACC972CF5D3BA0081C3E5 /* OrderFormViewController.xib */; };
+		6B1ACC9B2CF5E0D80081C3E5 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC9A2CF5E0D80081C3E5 /* BaseTextField.swift */; };
+		6B1ACC9D2CF5E2FA0081C3E5 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC9C2CF5E2F40081C3E5 /* PriceTextField.swift */; };
+		6B1ACCA02CF5E3F80081C3E5 /* OrderFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC9F2CF5E3F80081C3E5 /* OrderFormViewModel.swift */; };
+		6B1ACCA22CF5E6040081C3E5 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCA12CF5E6040081C3E5 /* Double.swift */; };
 		6BC785922CF4DC22004C0B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785872CF4DC22004C0B46 /* Assets.xcassets */; };
 		6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858B2CF4DC22004C0B46 /* LaunchScreen.storyboard */; };
 		6BC785952CF4DC22004C0B46 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858D2CF4DC22004C0B46 /* Root.storyboard */; };
@@ -47,6 +53,12 @@
 		6B1ACC8C2CF5C1B40081C3E5 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
 		6B1ACC8F2CF5C2B10081C3E5 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		6B1ACC922CF5C7060081C3E5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		6B1ACC962CF5D3BA0081C3E5 /* OrderFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormViewController.swift; sourceTree = "<group>"; };
+		6B1ACC972CF5D3BA0081C3E5 /* OrderFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderFormViewController.xib; sourceTree = "<group>"; };
+		6B1ACC9A2CF5E0D80081C3E5 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		6B1ACC9C2CF5E2F40081C3E5 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
+		6B1ACC9F2CF5E3F80081C3E5 /* OrderFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormViewModel.swift; sourceTree = "<group>"; };
+		6B1ACCA12CF5E6040081C3E5 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		6BC7856B2CF4DC19004C0B46 /* Graffity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graffity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC785862CF4DC22004C0B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BC785872CF4DC22004C0B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +152,32 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		6B1ACC942CF5D39A0081C3E5 /* OrderForm */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC9E2CF5E3E70081C3E5 /* ViewModel */,
+				6B1ACC952CF5D3A10081C3E5 /* View */,
+			);
+			path = OrderForm;
+			sourceTree = "<group>";
+		};
+		6B1ACC952CF5D3A10081C3E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC962CF5D3BA0081C3E5 /* OrderFormViewController.swift */,
+				6B1ACC972CF5D3BA0081C3E5 /* OrderFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B1ACC9E2CF5E3E70081C3E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC9F2CF5E3F80081C3E5 /* OrderFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6BC785622CF4DC19004C0B46 = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +199,7 @@
 		6BC785902CF4DC22004C0B46 /* Graffity */ = {
 			isa = PBXGroup;
 			children = (
+				6B1ACC942CF5D39A0081C3E5 /* OrderForm */,
 				6B1ACC912CF5C3930081C3E5 /* CoreData */,
 				6BC785EC2CF5AA5C004C0B46 /* Orders */,
 				6BC785C32CF4DFB5004C0B46 /* Menu */,
@@ -182,7 +221,10 @@
 				6BC785D32CF4F07B004C0B46 /* Font */,
 				6BC7859C2CF4DE67004C0B46 /* BaseButton.swift */,
 				6BC7859D2CF4DE67004C0B46 /* BaseTextView.swift */,
+				6B1ACC9A2CF5E0D80081C3E5 /* BaseTextField.swift */,
+				6B1ACC9C2CF5E2F40081C3E5 /* PriceTextField.swift */,
 				6BC7859E2CF4DE67004C0B46 /* Date.swift */,
+				6B1ACCA12CF5E6040081C3E5 /* Double.swift */,
 				6BC785A42CF4DE67004C0B46 /* PaddingTextField.swift */,
 				6BC785A52CF4DE67004C0B46 /* PaddingTextView.swift */,
 				6BC785A62CF4DE67004C0B46 /* ShadowView.swift */,
@@ -309,6 +351,7 @@
 				6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */,
 				6B1ACC892CF5B7A70081C3E5 /* OrderTableViewCell.xib in Resources */,
 				6BC785DF2CF4F15E004C0B46 /* Nozhik.otf in Resources */,
+				6B1ACC992CF5D3BA0081C3E5 /* OrderFormViewController.xib in Resources */,
 				6BC785952CF4DC22004C0B46 /* Root.storyboard in Resources */,
 				6BC785DB2CF4F0C8004C0B46 /* Montserrat-Bold.ttf in Resources */,
 				6BC785EB2CF5A7D1004C0B46 /* Angkor-Regular.ttf in Resources */,
@@ -369,13 +412,18 @@
 				6BC785AF2CF4DE67004C0B46 /* Date.swift in Sources */,
 				6BC785B02CF4DE67004C0B46 /* UITextField.swift in Sources */,
 				6BC785B12CF4DE67004C0B46 /* String.swift in Sources */,
+				6B1ACCA22CF5E6040081C3E5 /* Double.swift in Sources */,
 				6BC785B22CF4DE67004C0B46 /* ShadowView.swift in Sources */,
 				6BC785B32CF4DE67004C0B46 /* PaddingTextView.swift in Sources */,
 				6B1ACC8A2CF5B7A70081C3E5 /* OrderTableViewCell.swift in Sources */,
+				6B1ACCA02CF5E3F80081C3E5 /* OrderFormViewModel.swift in Sources */,
+				6B1ACC982CF5D3BA0081C3E5 /* OrderFormViewController.swift in Sources */,
 				6BC785C72CF4DFC7004C0B46 /* MenuViewController.swift in Sources */,
 				6BC785B52CF4DE67004C0B46 /* BaseButton.swift in Sources */,
 				6BC785B62CF4DE67004C0B46 /* UIView.swift in Sources */,
+				6B1ACC9D2CF5E2FA0081C3E5 /* PriceTextField.swift in Sources */,
 				6BC785B72CF4DE67004C0B46 /* PaddingTextField.swift in Sources */,
+				6B1ACC9B2CF5E0D80081C3E5 /* BaseTextField.swift in Sources */,
 				6BC785B82CF4DE67004C0B46 /* ViewController.swift in Sources */,
 				6B1ACC932CF5C7060081C3E5 /* CoreDataManager.swift in Sources */,
 				6BC785962CF4DC22004C0B46 /* AppDelegate.swift in Sources */,
@@ -508,7 +556,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -571,7 +619,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

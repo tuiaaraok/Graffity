@@ -8,6 +8,10 @@
 import UIKit
 import FSPagerView
 
+protocol OrderTableViewCellDelegate: AnyObject {
+    func confirmOrder(by id: UUID)
+}
+
 class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -15,10 +19,17 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var pagerView: FSPagerView!
     @IBOutlet weak var pageControl: FSPageControl!
+    @IBOutlet weak var bgView: UIView!
     private var orderModel: OrderModel?
+    @IBOutlet weak var confirmView: UIView!
+    weak var delegate: OrderTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = .clear
+        bgView.layer.cornerRadius = 8
+        bgView.layer.borderWidth = 2
+        bgView.layer.borderColor = UIColor.black.cgColor
         pagerView.layer.cornerRadius = 8
         pagerView.layer.borderWidth = 2
         pagerView.layer.borderColor = UIColor.black.cgColor
@@ -27,16 +38,20 @@ class OrderTableViewCell: UITableViewCell {
         pagerView.delegate = self
         pagerView.contentMode = .center
         pagerView.transformer = FSPagerViewTransformer(type: .linear)
-//        pagerView.itemSize = CGSize(width: 79, height: 75)
+        pagerView.itemSize = pagerView.bounds.size
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
         pageControl.contentHorizontalAlignment = .center
         pageControl.setFillColor(.white, for: .selected)
-        pageControl.setFillColor(.baseGray, for: .normal)
+        pageControl.setFillColor(.black, for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+    }
+    
+    override func prepareForReuse() {
+        orderModel = nil
+        delegate = nil
     }
     
     func configure(orderModel: OrderModel) {
@@ -44,6 +59,16 @@ class OrderTableViewCell: UITableViewCell {
         nameLabel.text = orderModel.name
         dateLabel.text = orderModel.date?.toString()
         locationLabel.text = orderModel.location
+        priceLabel.text = "\(orderModel.price?.formattedToString() ?? "")$ Order cost"
+        self.pageControl.numberOfPages = orderModel.photos.count
+        pagerView.reloadData()
+        confirmView.isHidden = orderModel.isCompleted
+    }
+    
+    @IBAction func clickedConfirm(_ sender: UIButton) {
+        if let id = orderModel?.id {
+            delegate?.confirmOrder(by: id)
+        }
     }
     
 }

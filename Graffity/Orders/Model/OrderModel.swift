@@ -15,4 +15,5 @@ struct OrderModel {
     var location: String?
     var info: String?
     var photos: [Data] = []
+    var isCompleted = false
 }

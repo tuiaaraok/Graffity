@@ -11,7 +11,13 @@ class BaseButton: UIButton {
     
     override var isEnabled: Bool {
         didSet {
-            self.backgroundColor = isEnabled ? self.backgroundColor?.withAlphaComponent(1) : self.backgroundColor?.withAlphaComponent(0.5)
+            self.backgroundColor = isEnabled ? .baseGreen : .grayBlue
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            self.backgroundColor = isSelected ? .baseGreen : .grayBlue
         }
     }
     

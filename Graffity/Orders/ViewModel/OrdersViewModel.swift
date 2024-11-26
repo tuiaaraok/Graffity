@@ -18,11 +18,23 @@ class OrdersViewModel {
         CoreDataManager.shared.fetchOrders { [weak self] orders, _ in
             guard let self = self else { return }
             self.data = orders
-            
+            filterByType(type: type)
         }
+    }
+    
+    func confirmOrder(id: UUID, completion: @escaping (Error?) -> Void) {
+        CoreDataManager.shared.confirmOrder(id: id, completion: completion)
     }
     
     func filterByType(type: Int) {
         self.type = type
+        let isCompelted = type == 1
+        self.orders = data.filter({ $0.isCompleted == isCompelted })
+    }
+    
+    func clear() {
+        type = 0
+        data = []
+        orders = []
     }
 }
