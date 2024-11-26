@@ -80,6 +80,7 @@ extension OrderTableViewCell: FSPagerViewDataSource, FSPagerViewDelegate {
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.contentMode = .scaleAspectFill
         if let data = orderModel?.photos[index] {
             cell.imageView?.image = UIImage(data: data)
         }

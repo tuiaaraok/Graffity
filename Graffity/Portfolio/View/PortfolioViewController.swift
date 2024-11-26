@@ -10,6 +10,7 @@ import Combine
 
 class PortfolioViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var portfolioCollectionView: UICollectionView!
     private let viewModel = PortfolioViewModel.shared
     private var cancellables: Set<AnyCancellable> = []
@@ -22,10 +23,10 @@ class PortfolioViewController: UIViewController {
     }
     
     func setupUI() {
-        setNavigationTitle(title: "PORTFOLIO")
+        titleLabel.font = .regularBarse(size: 30)
         setNaviagtionBackButton(title: "back")
         let layout = UICollectionViewFlowLayout()
-        let totalSpacing: CGFloat = 16 + 14
+        let totalSpacing: CGFloat = 20 + 14
         let itemWidth = (view.frame.size.width - totalSpacing) / 2
         layout.itemSize = CGSize(width: itemWidth, height: 203)
         layout.minimumInteritemSpacing = 14

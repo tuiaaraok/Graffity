@@ -12,6 +12,7 @@ import PhotosUI
 
 class OrderFormViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameTextField: BaseTextField!
     @IBOutlet weak var dateTextField: BaseTextField!
@@ -34,7 +35,7 @@ class OrderFormViewController: UIViewController {
     }
 
     func setupUI() {
-        setNavigationTitle(title: "ADD ORDERS")
+        titleLabel.font = .regularBarse(size: 30)
         setNaviagtionBackButton(title: "cancel")
         nameTextField.delegate = self
         dateTextField.delegate = self
@@ -72,9 +73,10 @@ class OrderFormViewController: UIViewController {
                 self.priceTextField.text = order.price?.formattedToString()
                 self.locationTextField.text = order.location
                 self.infoTextView.text = order.info
-                self.createButton.isEnabled = (order.name.checkValidation() && order.date != nil && order.price != nil && order.info.checkValidation() && order.location.checkValidation() && (UIImage(data: order.photos.first ?? Data()) != UIImage.imagePlaceholder))
+                let isValidPhoto = order.photos.first != UIImage.imagePlaceholder.pngData()
+                self.createButton.isEnabled = (order.name.checkValidation() && order.date != nil && order.price != nil && order.info.checkValidation() && order.location.checkValidation() && isValidPhoto)
                 self.pageControl.numberOfPages = order.photos.count
-                let size = (UIImage(data: order.photos.first ?? Data()) != UIImage.imagePlaceholder) ? self.pagerView.bounds.size : CGSize(width: 49, height: 25)
+                let size = isValidPhoto ? self.pagerView.bounds.size : CGSize(width: 49, height: 25)
                 self.pagerView.itemSize = size
                 self.pagerView.reloadData()
             }
@@ -173,6 +175,7 @@ extension OrderFormViewController: FSPagerViewDataSource, FSPagerViewDelegate {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
         
         let data = viewModel.orderModel.photos[index]
+        cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.image = UIImage(data: data)
         return cell
     }

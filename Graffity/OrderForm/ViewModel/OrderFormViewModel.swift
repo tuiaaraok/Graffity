@@ -19,7 +19,7 @@ class OrderFormViewModel {
     }
     
     func addImage(data: Data) {
-        if let data = orderModel.photos.first, (UIImage(data: data) == .imagePlaceholder) {
+        if orderModel.photos.first == UIImage.imagePlaceholder.pngData() {
             orderModel.photos.removeAll()
         }
         orderModel.photos.append(data)

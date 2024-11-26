@@ -28,7 +28,7 @@ class PortfolioCollectionViewCell: UICollectionViewCell {
         pagerView.layer.masksToBounds = true
         pagerView.dataSource = self
         pagerView.delegate = self
-        pagerView.contentMode = .center
+        pagerView.contentMode = .scaleAspectFit
         pagerView.transformer = FSPagerViewTransformer(type: .linear)
         pagerView.itemSize = pagerView.bounds.size
         pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -53,6 +53,7 @@ extension PortfolioCollectionViewCell: FSPagerViewDataSource, FSPagerViewDelegat
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
+        cell.imageView?.contentMode = .scaleAspectFill
         if let data = portfolio?.photos[index] {
             cell.imageView?.image = UIImage(data: data)
         }

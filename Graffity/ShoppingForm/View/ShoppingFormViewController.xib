@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nozhik.otf">
+            <string>NozhikBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShoppingFormViewController" customModule="Graffity" customModuleProvider="target">
+            <connections>
+                <outlet property="saveButton" destination="fug-Gv-U0g" id="omk-Ai-Oo3"/>
+                <outlet property="shoppingsTableView" destination="Bbp-Dc-yBr" id="TsU-UN-qhd"/>
+                <outlet property="titleLabel" destination="QPk-dC-hrc" id="BB4-I6-xcC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD SHOPPING LIST" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="QPk-dC-hrc">
+                    <rect key="frame" x="16" y="59" width="361" height="20"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bbp-Dc-yBr">
+                    <rect key="frame" x="0.0" y="117" width="393" height="614"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4m-Rf-U5x">
+                    <rect key="frame" x="40" y="755" width="313" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fug-Gv-U0g" customClass="BaseButton" customModule="Graffity" customModuleProvider="target">
+                            <rect key="frame" x="-4" y="-4" width="313" height="44"/>
+                            <color key="backgroundColor" name="baseGreen"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="GPZ-B1-Krk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NozhikBold" family="Nozhik" pointSize="26"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="save to shopping list">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="clickedSave:" destination="-1" eventType="touchUpInside" id="zkm-fQ-w8j"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="fug-Gv-U0g" secondAttribute="trailing" constant="4" id="Fsf-fp-Jiu"/>
+                        <constraint firstItem="fug-Gv-U0g" firstAttribute="leading" secondItem="A4m-Rf-U5x" secondAttribute="leading" constant="-4" id="XlE-H9-6f2"/>
+                        <constraint firstItem="fug-Gv-U0g" firstAttribute="top" secondItem="A4m-Rf-U5x" secondAttribute="top" constant="-4" id="iAW-Nb-kYd"/>
+                        <constraint firstAttribute="height" constant="44" id="kgo-RR-5IV"/>
+                        <constraint firstAttribute="bottom" secondItem="fug-Gv-U0g" secondAttribute="bottom" constant="4" id="q1S-KG-Dgh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A4m-Rf-U5x" secondAttribute="trailing" constant="40" id="3u2-cD-4Em"/>
+                <constraint firstItem="Bbp-Dc-yBr" firstAttribute="top" secondItem="QPk-dC-hrc" secondAttribute="bottom" constant="38" id="6gs-9W-OFS"/>
+                <constraint firstItem="QPk-dC-hrc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="LX8-jt-nxa"/>
+                <constraint firstItem="Bbp-Dc-yBr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MGt-ZA-6lV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bbp-Dc-yBr" secondAttribute="trailing" id="Tfu-81-Ylb"/>
+                <constraint firstItem="A4m-Rf-U5x" firstAttribute="top" secondItem="Bbp-Dc-yBr" secondAttribute="bottom" constant="24" id="e6u-Du-PHL"/>
+                <constraint firstItem="A4m-Rf-U5x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="gbJ-xM-afC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="A4m-Rf-U5x" secondAttribute="bottom" constant="19" id="lZO-gg-gJO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QPk-dC-hrc" secondAttribute="trailing" constant="16" id="t6q-rP-DWD"/>
+                <constraint firstItem="QPk-dC-hrc" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ynf-XJ-5oE"/>
+                <constraint firstItem="QPk-dC-hrc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="z9A-pz-5HR"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="L4b-Pc-svP" appends="YES" id="dMH-8y-UvG"/>
+            </connections>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+        <tapGestureRecognizer id="L4b-Pc-svP">
+            <connections>
+                <action selector="handleTapGesture:" destination="-1" id="1Jx-Sp-ECb"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <namedColor name="baseGreen">
+            <color red="0.14499999582767487" green="0.66299998760223389" blue="0.63899999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

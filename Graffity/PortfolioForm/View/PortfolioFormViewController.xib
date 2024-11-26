@@ -22,6 +22,7 @@
                 <outlet property="pagerView" destination="9d3-r8-cTP" id="POh-rN-zWg"/>
                 <outlet property="saveButton" destination="tRo-m8-75x" id="VjA-Ic-xuj"/>
                 <outlet property="tapGesture" destination="tvL-O9-LFb" id="91J-lV-Xld"/>
+                <outlet property="titleLabel" destination="KH4-lP-gXs" id="y1X-tM-pfc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -141,21 +142,29 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD PORTFOLIO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KH4-lP-gXs">
+                    <rect key="frame" x="131" y="59" width="131.33333333333337" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <gestureRecognizers/>
             <constraints>
-                <constraint firstItem="1Ll-K1-UUP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="2rn-fV-yPP"/>
                 <constraint firstItem="f0A-05-04p" firstAttribute="top" secondItem="kVE-cj-WgQ" secondAttribute="bottom" constant="74" id="5pl-kV-cWc"/>
                 <constraint firstItem="kVE-cj-WgQ" firstAttribute="width" secondItem="9d3-r8-cTP" secondAttribute="width" multiplier="0.830671" id="8eR-go-hcU"/>
                 <constraint firstItem="wsk-OI-nc8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="F7b-Ai-TrP"/>
+                <constraint firstItem="1Ll-K1-UUP" firstAttribute="top" secondItem="KH4-lP-gXs" secondAttribute="bottom" constant="59" id="Heb-8J-aR5"/>
+                <constraint firstItem="KH4-lP-gXs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PTU-gC-FAC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Ll-K1-UUP" secondAttribute="trailing" constant="40" id="PeU-k2-u4O"/>
                 <constraint firstItem="f0A-05-04p" firstAttribute="top" secondItem="1Ll-K1-UUP" secondAttribute="bottom" constant="66" id="PqW-1g-weO"/>
                 <constraint firstItem="kVE-cj-WgQ" firstAttribute="centerX" secondItem="9d3-r8-cTP" secondAttribute="centerX" id="Wau-Vi-X6L"/>
                 <constraint firstItem="1Ll-K1-UUP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="ZYx-Ok-crv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wsk-OI-nc8" secondAttribute="trailing" constant="40" id="bCG-le-KiZ"/>
                 <constraint firstItem="wms-pr-5NK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="bkW-hl-sAl"/>
+                <constraint firstItem="KH4-lP-gXs" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="h6a-op-WDn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wms-pr-5NK" secondAttribute="trailing" constant="40" id="koj-72-lAq"/>
                 <constraint firstItem="f0A-05-04p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="mIs-0J-sj3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wms-pr-5NK" secondAttribute="bottom" constant="24" id="nDK-DJ-0hw"/>

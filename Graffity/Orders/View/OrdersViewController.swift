@@ -10,6 +10,7 @@ import Combine
 
 class OrdersViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var ordersTableView: UITableView!
     private let viewModel = OrdersViewModel.shared
     private var cancellables: Set<AnyCancellable> = []
@@ -23,7 +24,7 @@ class OrdersViewController: UIViewController {
     }
     
     func setupUI() {
-        setNavigationTitle(title: "Orders")
+        titleLabel.font = .regularBarse(size: 30)
         setNaviagtionBackButton(title: "BACK")
         ordersTableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderTableViewCell")
         ordersTableView.delegate = self
@@ -47,6 +48,7 @@ class OrdersViewController: UIViewController {
                 self.viewModel.fetchOrders()
             }
         }
+        self.navigationController?.pushViewController(orderFormVC, animated: true)
     }
     
     @IBAction func chooseType(_ sender: BaseButton) {

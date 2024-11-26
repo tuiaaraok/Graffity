@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Nozhik.otf">
+            <string>NozhikBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="78" id="KGk-i7-Jjw" customClass="ShoppingFormTableViewCell" customModule="Graffity" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfc-DA-Ctz">
+                        <rect key="frame" x="34" y="29" width="165.33333333333334" height="48"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i7i-77-DnT" customClass="BaseTextField" customModule="Graffity" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="-4" width="165.33333333333334" height="48"/>
+                                <color key="backgroundColor" name="baseGray"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="i7i-77-DnT" firstAttribute="leading" secondItem="yfc-DA-Ctz" secondAttribute="leading" constant="-4" id="0Us-Sz-5Kw"/>
+                            <constraint firstAttribute="trailing" secondItem="i7i-77-DnT" secondAttribute="trailing" constant="4" id="H47-Xy-Ycs"/>
+                            <constraint firstItem="i7i-77-DnT" firstAttribute="top" secondItem="yfc-DA-Ctz" secondAttribute="top" constant="-4" id="exm-Jv-WZa"/>
+                            <constraint firstAttribute="height" constant="48" id="fpo-NJ-Cgm"/>
+                            <constraint firstAttribute="bottom" secondItem="i7i-77-DnT" secondAttribute="bottom" constant="4" id="zWl-2V-m0k"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSe-ng-W81">
+                        <rect key="frame" x="30" y="0.0" width="35" height="25"/>
+                        <fontDescription key="fontDescription" name="NozhikBold" family="Nozhik" pointSize="26"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yi4-Po-OGZ">
+                        <rect key="frame" x="215.33333333333334" y="29" width="82.666666666666657" height="48"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHu-Ua-i6e" customClass="PricesTextField" customModule="Graffity" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="-4" width="82.666666666666671" height="48"/>
+                                <color key="backgroundColor" name="baseGray"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nHu-Ua-i6e" firstAttribute="leading" secondItem="Yi4-Po-OGZ" secondAttribute="leading" constant="-4" id="0RY-qT-cVy"/>
+                            <constraint firstAttribute="height" constant="48" id="CRQ-Rn-hRk"/>
+                            <constraint firstAttribute="bottom" secondItem="nHu-Ua-i6e" secondAttribute="bottom" constant="4" id="HnY-PJ-5zz"/>
+                            <constraint firstItem="nHu-Ua-i6e" firstAttribute="top" secondItem="Yi4-Po-OGZ" secondAttribute="top" constant="-4" id="LUO-ek-BJh"/>
+                            <constraint firstAttribute="trailing" secondItem="nHu-Ua-i6e" secondAttribute="trailing" constant="4" id="wTR-DQ-BK5"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzz-tv-6bD">
+                        <rect key="frame" x="211.33333333333334" y="0.0" width="36" height="25"/>
+                        <fontDescription key="fontDescription" name="NozhikBold" family="Nozhik" pointSize="26"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tSe-ng-W81" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0Kw-jj-5F7"/>
+                    <constraint firstItem="yfc-DA-Ctz" firstAttribute="top" secondItem="tSe-ng-W81" secondAttribute="bottom" constant="4" id="39d-rn-Pbl"/>
+                    <constraint firstItem="yfc-DA-Ctz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34" id="6ea-Gc-Mnv"/>
+                    <constraint firstItem="tSe-ng-W81" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="DMq-cE-Dc0"/>
+                    <constraint firstItem="gzz-tv-6bD" firstAttribute="leading" secondItem="nHu-Ua-i6e" secondAttribute="leading" id="Fqx-uV-ZEx"/>
+                    <constraint firstAttribute="bottom" secondItem="yfc-DA-Ctz" secondAttribute="bottom" constant="1" id="IiR-ff-Yac"/>
+                    <constraint firstAttribute="trailing" secondItem="Yi4-Po-OGZ" secondAttribute="trailing" constant="22" id="LHN-cP-EZI"/>
+                    <constraint firstItem="yfc-DA-Ctz" firstAttribute="width" secondItem="Yi4-Po-OGZ" secondAttribute="width" multiplier="2" id="aNh-7r-PzI"/>
+                    <constraint firstItem="gzz-tv-6bD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bqh-la-dYD"/>
+                    <constraint firstItem="Yi4-Po-OGZ" firstAttribute="leading" secondItem="yfc-DA-Ctz" secondAttribute="trailing" constant="16" id="lIW-My-vXv"/>
+                    <constraint firstItem="Yi4-Po-OGZ" firstAttribute="top" secondItem="gzz-tv-6bD" secondAttribute="bottom" constant="4" id="vab-O2-6S2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameTextField" destination="i7i-77-DnT" id="EMt-U5-cJK"/>
+                <outlet property="priceTextField" destination="nHu-Ua-i6e" id="5q6-iP-pd1"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="31.690140845070424"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="baseGray">
+            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

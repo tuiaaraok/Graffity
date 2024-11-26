@@ -18,6 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersViewController" customModule="Graffity" customModuleProvider="target">
             <connections>
                 <outlet property="ordersTableView" destination="euk-Xt-dIY" id="5RI-Kd-rUS"/>
+                <outlet property="titleLabel" destination="PF3-fu-ZEx" id="7pb-Pl-rjt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outletCollection property="sectionButtons" destination="VD8-Ce-sVE" collectionClass="NSMutableArray" id="TKk-bF-5sL"/>
                 <outletCollection property="sectionButtons" destination="Huy-4j-yST" collectionClass="NSMutableArray" id="zs6-l6-Zi5"/>
@@ -32,7 +33,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzQ-A7-lvf">
-                    <rect key="frame" x="173.66666666666666" y="83" width="46" height="49"/>
+                    <rect key="frame" x="173.66666666666666" y="95.333333333333329" width="46" height="48.999999999999986"/>
                     <fontDescription key="fontDescription" name="NozhikBold" family="Nozhik" pointSize="38"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="+ADD">
@@ -43,7 +44,7 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="HPz-Bs-DjM">
-                    <rect key="frame" x="19" y="156" width="355" height="53"/>
+                    <rect key="frame" x="19" y="168.33333333333334" width="355" height="53"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvb-1e-8ok">
                             <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="53"/>
@@ -126,16 +127,22 @@
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="euk-Xt-dIY">
-                    <rect key="frame" x="0.0" y="249" width="393" height="569"/>
+                    <rect key="frame" x="0.0" y="261.33333333333331" width="393" height="556.66666666666674"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORDERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF3-fu-ZEx">
+                    <rect key="frame" x="163.33333333333334" y="59.000000000000007" width="66.333333333333343" height="20.333333333333336"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="CXC-5L-KzN"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="zzQ-A7-lvf" firstAttribute="top" secondItem="CXC-5L-KzN" secondAttribute="top" constant="24" id="3tq-yF-f5R"/>
                 <constraint firstItem="CXC-5L-KzN" firstAttribute="trailing" secondItem="euk-Xt-dIY" secondAttribute="trailing" id="4Cd-w3-xcj"/>
                 <constraint firstItem="HPz-Bs-DjM" firstAttribute="leading" secondItem="CXC-5L-KzN" secondAttribute="leading" constant="19" id="5bM-5f-Sbb"/>
+                <constraint firstItem="zzQ-A7-lvf" firstAttribute="top" secondItem="PF3-fu-ZEx" secondAttribute="bottom" constant="16" id="8pu-rt-0Uq"/>
                 <constraint firstItem="HPz-Bs-DjM" firstAttribute="top" secondItem="zzQ-A7-lvf" secondAttribute="bottom" constant="24" id="Fjk-YT-cb6"/>
                 <constraint firstItem="zzQ-A7-lvf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JZe-qw-4DF"/>
                 <constraint firstItem="CXC-5L-KzN" firstAttribute="trailing" secondItem="HPz-Bs-DjM" secondAttribute="trailing" constant="19" id="MLc-hQ-8kO"/>
@@ -143,7 +150,9 @@
                 <constraint firstItem="ftz-IF-FFg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RoY-7D-yrr"/>
                 <constraint firstItem="ftz-IF-FFg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cgd-pB-419"/>
                 <constraint firstItem="euk-Xt-dIY" firstAttribute="top" secondItem="HPz-Bs-DjM" secondAttribute="bottom" constant="40" id="hcp-Sx-spe"/>
+                <constraint firstItem="PF3-fu-ZEx" firstAttribute="centerX" secondItem="CXC-5L-KzN" secondAttribute="centerX" id="iel-4j-xSU"/>
                 <constraint firstItem="euk-Xt-dIY" firstAttribute="leading" secondItem="CXC-5L-KzN" secondAttribute="leading" id="kz1-Ja-IHT"/>
+                <constraint firstItem="PF3-fu-ZEx" firstAttribute="top" secondItem="CXC-5L-KzN" secondAttribute="top" id="ndh-5n-AOK"/>
                 <constraint firstAttribute="trailing" secondItem="ftz-IF-FFg" secondAttribute="trailing" id="r24-hL-nSw"/>
                 <constraint firstItem="CXC-5L-KzN" firstAttribute="bottom" secondItem="euk-Xt-dIY" secondAttribute="bottom" id="tkL-sB-KHJ"/>
             </constraints>

@@ -11,6 +11,7 @@ import Combine
 import PhotosUI
 
 class PortfolioFormViewController: UIViewController {
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var pagerView: FSPagerView!
     @IBOutlet weak var pageControl: FSPageControl!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
@@ -27,7 +28,7 @@ class PortfolioFormViewController: UIViewController {
     }
     
     func setupUI() {
-        setNavigationTitle(title: "ADD PORTFOLIO")
+        titleLabel.font = .regularBarse(size: 30)
         setNaviagtionBackButton(title: "cancel")
         pagerView.layer.masksToBounds = true
         pagerView.dataSource = self
@@ -110,6 +111,7 @@ extension PortfolioFormViewController: FSPagerViewDataSource, FSPagerViewDelegat
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
         
         let data = viewModel.portfolio.photos[index]
+        cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.image = UIImage(data: data)
         return cell
     }
