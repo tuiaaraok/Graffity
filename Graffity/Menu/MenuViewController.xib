@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Graffity" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="sectionButtons" destination="2rW-Jp-o20" collectionClass="NSMutableArray" id="gOz-5W-SfL"/>
+                <outletCollection property="sectionButtons" destination="YUd-wZ-62B" collectionClass="NSMutableArray" id="aYZ-Ec-TI9"/>
+                <outletCollection property="sectionButtons" destination="s0a-Dm-sCZ" collectionClass="NSMutableArray" id="w4I-f8-cbE"/>
+                <outletCollection property="sectionButtons" destination="UTC-Iu-DNu" collectionClass="NSMutableArray" id="Zgn-zR-8On"/>
+                <outletCollection property="sectionButtons" destination="Zal-TU-PS3" collectionClass="NSMutableArray" id="ge4-eZ-LEd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="YXw-P8-nd3">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hPU-Kw-ega">
+                    <rect key="frame" x="16" y="295.66666666666669" width="135" height="261.00000000000006"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-Jp-o20">
+                            <rect key="frame" x="0.0" y="0.0" width="135" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Orders">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedOrders:" destination="-1" eventType="touchUpInside" id="vlJ-IH-XPd"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUd-wZ-62B">
+                            <rect key="frame" x="0.0" y="57" width="135" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Portfolio">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedPortfolio:" destination="-1" eventType="touchUpInside" id="bsH-q5-tWF"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0a-Dm-sCZ">
+                            <rect key="frame" x="0.0" y="114" width="135" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="SHOPPING LIST">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedShoppingList:" destination="-1" eventType="touchUpInside" id="7FK-5c-cSZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTC-Iu-DNu">
+                            <rect key="frame" x="0.0" y="171" width="135" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="ANALYTICS">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedAnalytics:" destination="-1" eventType="touchUpInside" id="hkb-qe-Roc"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zal-TU-PS3">
+                            <rect key="frame" x="0.0" y="227.99999999999994" width="135" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="SETTINGS">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedSettings:" destination="-1" eventType="touchUpInside" id="IqM-TD-Pne"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="YXw-P8-nd3" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="4k4-bp-uIS"/>
+                <constraint firstItem="YXw-P8-nd3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Hda-cL-PLd"/>
+                <constraint firstAttribute="trailing" secondItem="YXw-P8-nd3" secondAttribute="trailing" id="Mua-1H-URu"/>
+                <constraint firstItem="hPU-Kw-ega" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Nuy-Me-49T"/>
+                <constraint firstItem="hPU-Kw-ega" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="PvR-JD-KD6"/>
+                <constraint firstAttribute="top" secondItem="YXw-P8-nd3" secondAttribute="top" id="zel-yE-AAL"/>
+            </constraints>
+            <point key="canvasLocation" x="136.64122137404578" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="402" height="874"/>
+        <namedColor name="grayBlue">
+            <color red="0.74117647058823533" green="0.85882352941176465" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
