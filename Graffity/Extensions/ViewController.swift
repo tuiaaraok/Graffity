@@ -12,18 +12,18 @@ extension UIViewController {
     func setNavigationTitle(title: String) {
         let titleLabel = UILabel()
         titleLabel.text = title
-//        titleLabel.textColor = .baseBlack
-//        titleLabel.font = .semibold(size: 22)
+        titleLabel.textColor = .black
+        titleLabel.font = .regularBarse(size: 30)
         titleLabel.textAlignment = .center
         titleLabel.sizeToFit()
         self.navigationItem.titleView = titleLabel
     }
     
-    func setNaviagtionBackButton() {
+    func setNaviagtionBackButton(title: String) {
         let backButton = UIButton(type: .custom)
-        backButton.setTitle("Cancel", for: .normal)
-//        backButton.titleLabel?.font = .regular(size: 16)
-//        backButton.setTitleColor(.baseRed, for: .normal)
+        backButton.setTitle(title, for: .normal)
+        backButton.titleLabel?.font = .bold(size: 26)
+        backButton.setTitleColor(.black, for: .normal)
         backButton.addTarget(self, action: #selector(clickedBack), for: .touchUpInside)
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
     }

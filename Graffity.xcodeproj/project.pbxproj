@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2324ECA7957B9DD3603CE6 /* Pods_Graffity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 261E574C191AAC45097A1900 /* Pods_Graffity.framework */; };
+		6B1ACC892CF5B7A70081C3E5 /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1ACC882CF5B7A70081C3E5 /* OrderTableViewCell.xib */; };
+		6B1ACC8A2CF5B7A70081C3E5 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC872CF5B7A70081C3E5 /* OrderTableViewCell.swift */; };
+		6B1ACC8D2CF5C1B40081C3E5 /* OrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC8C2CF5C1B40081C3E5 /* OrderModel.swift */; };
+		6B1ACC902CF5C2B10081C3E5 /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC8F2CF5C2B10081C3E5 /* OrdersViewModel.swift */; };
+		6B1ACC932CF5C7060081C3E5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC922CF5C7060081C3E5 /* CoreDataManager.swift */; };
 		6BC785922CF4DC22004C0B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785872CF4DC22004C0B46 /* Assets.xcassets */; };
 		6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858B2CF4DC22004C0B46 /* LaunchScreen.storyboard */; };
 		6BC785952CF4DC22004C0B46 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858D2CF4DC22004C0B46 /* Root.storyboard */; };
@@ -30,9 +36,17 @@
 		6BC785DB2CF4F0C8004C0B46 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785DA2CF4F0C8004C0B46 /* Montserrat-Bold.ttf */; };
 		6BC785DF2CF4F15E004C0B46 /* Nozhik.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785DE2CF4F15E004C0B46 /* Nozhik.otf */; };
 		6BC785EB2CF5A7D1004C0B46 /* Angkor-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785EA2CF5A7D1004C0B46 /* Angkor-Regular.ttf */; };
+		6BC785EF2CF5AA75004C0B46 /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785EE2CF5AA75004C0B46 /* OrdersViewController.xib */; };
+		6BC785F02CF5AA75004C0B46 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC785ED2CF5AA75004C0B46 /* OrdersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261E574C191AAC45097A1900 /* Pods_Graffity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Graffity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1ACC872CF5B7A70081C3E5 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		6B1ACC882CF5B7A70081C3E5 /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		6B1ACC8C2CF5C1B40081C3E5 /* OrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderModel.swift; sourceTree = "<group>"; };
+		6B1ACC8F2CF5C2B10081C3E5 /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
+		6B1ACC922CF5C7060081C3E5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		6BC7856B2CF4DC19004C0B46 /* Graffity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graffity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC785862CF4DC22004C0B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BC785872CF4DC22004C0B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +72,10 @@
 		6BC785DA2CF4F0C8004C0B46 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		6BC785DE2CF4F15E004C0B46 /* Nozhik.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nozhik.otf; sourceTree = "<group>"; };
 		6BC785EA2CF5A7D1004C0B46 /* Angkor-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Angkor-Regular.ttf"; sourceTree = "<group>"; };
+		6BC785ED2CF5AA75004C0B46 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		6BC785EE2CF5AA75004C0B46 /* OrdersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
+		C4D581772F76E9B5B79256E7 /* Pods-Graffity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graffity.release.xcconfig"; path = "Target Support Files/Pods-Graffity/Pods-Graffity.release.xcconfig"; sourceTree = "<group>"; };
+		DDEA65D8D8FBAA0B56988421 /* Pods-Graffity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Graffity.debug.xcconfig"; path = "Target Support Files/Pods-Graffity/Pods-Graffity.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +83,70 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2324ECA7957B9DD3603CE6 /* Pods_Graffity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53670CDEFAE93DBC32335451 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				261E574C191AAC45097A1900 /* Pods_Graffity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B1ACC852CF5B78E0081C3E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BC785ED2CF5AA75004C0B46 /* OrdersViewController.swift */,
+				6BC785EE2CF5AA75004C0B46 /* OrdersViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B1ACC862CF5B7960081C3E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC872CF5B7A70081C3E5 /* OrderTableViewCell.swift */,
+				6B1ACC882CF5B7A70081C3E5 /* OrderTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6B1ACC8B2CF5C19D0081C3E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC8C2CF5C1B40081C3E5 /* OrderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B1ACC8E2CF5C2A50081C3E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC8F2CF5C2B10081C3E5 /* OrdersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B1ACC912CF5C3930081C3E5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC922CF5C7060081C3E5 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		6BC785622CF4DC19004C0B46 = {
 			isa = PBXGroup;
 			children = (
 				6BC785902CF4DC22004C0B46 /* Graffity */,
 				6BC7856C2CF4DC19004C0B46 /* Products */,
+				7227DCBE84A9A5053BEFCE2A /* Pods */,
+				53670CDEFAE93DBC32335451 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +161,8 @@
 		6BC785902CF4DC22004C0B46 /* Graffity */ = {
 			isa = PBXGroup;
 			children = (
+				6B1ACC912CF5C3930081C3E5 /* CoreData */,
+				6BC785EC2CF5AA5C004C0B46 /* Orders */,
 				6BC785C32CF4DFB5004C0B46 /* Menu */,
 				6BC785C22CF4DF13004C0B46 /* Root */,
 				6BC7859B2CF4DE48004C0B46 /* Extensions */,
@@ -150,6 +223,26 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		6BC785EC2CF5AA5C004C0B46 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACC8E2CF5C2A50081C3E5 /* ViewModel */,
+				6B1ACC8B2CF5C19D0081C3E5 /* Model */,
+				6B1ACC862CF5B7960081C3E5 /* Cell */,
+				6B1ACC852CF5B78E0081C3E5 /* View */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		7227DCBE84A9A5053BEFCE2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDEA65D8D8FBAA0B56988421 /* Pods-Graffity.debug.xcconfig */,
+				C4D581772F76E9B5B79256E7 /* Pods-Graffity.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,17 +250,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6BC785812CF4DC1B004C0B46 /* Build configuration list for PBXNativeTarget "Graffity" */;
 			buildPhases = (
+				31A00A831236714F97891EC1 /* [CP] Check Pods Manifest.lock */,
 				6BC785672CF4DC19004C0B46 /* Sources */,
 				6BC785682CF4DC19004C0B46 /* Frameworks */,
 				6BC785692CF4DC19004C0B46 /* Resources */,
+				2291F54826F8ED204EDB156C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Graffity;
-			packageProductDependencies = (
-			);
 			productName = Graffity;
 			productReference = 6BC7856B2CF4DC19004C0B46 /* Graffity.app */;
 			productType = "com.apple.product-type.application";
@@ -214,14 +307,58 @@
 				6BC785922CF4DC22004C0B46 /* Assets.xcassets in Resources */,
 				6BC785C62CF4DFC7004C0B46 /* MenuViewController.xib in Resources */,
 				6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */,
+				6B1ACC892CF5B7A70081C3E5 /* OrderTableViewCell.xib in Resources */,
 				6BC785DF2CF4F15E004C0B46 /* Nozhik.otf in Resources */,
 				6BC785952CF4DC22004C0B46 /* Root.storyboard in Resources */,
 				6BC785DB2CF4F0C8004C0B46 /* Montserrat-Bold.ttf in Resources */,
 				6BC785EB2CF5A7D1004C0B46 /* Angkor-Regular.ttf in Resources */,
+				6BC785EF2CF5AA75004C0B46 /* OrdersViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2291F54826F8ED204EDB156C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Graffity/Pods-Graffity-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Graffity/Pods-Graffity-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Graffity/Pods-Graffity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31A00A831236714F97891EC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Graffity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6BC785672CF4DC19004C0B46 /* Sources */ = {
@@ -234,16 +371,21 @@
 				6BC785B12CF4DE67004C0B46 /* String.swift in Sources */,
 				6BC785B22CF4DE67004C0B46 /* ShadowView.swift in Sources */,
 				6BC785B32CF4DE67004C0B46 /* PaddingTextView.swift in Sources */,
+				6B1ACC8A2CF5B7A70081C3E5 /* OrderTableViewCell.swift in Sources */,
 				6BC785C72CF4DFC7004C0B46 /* MenuViewController.swift in Sources */,
 				6BC785B52CF4DE67004C0B46 /* BaseButton.swift in Sources */,
 				6BC785B62CF4DE67004C0B46 /* UIView.swift in Sources */,
 				6BC785B72CF4DE67004C0B46 /* PaddingTextField.swift in Sources */,
 				6BC785B82CF4DE67004C0B46 /* ViewController.swift in Sources */,
+				6B1ACC932CF5C7060081C3E5 /* CoreDataManager.swift in Sources */,
 				6BC785962CF4DC22004C0B46 /* AppDelegate.swift in Sources */,
 				6BC785D52CF4F084004C0B46 /* Font.swift in Sources */,
 				6BC785972CF4DC22004C0B46 /* Graffity.xcdatamodeld in Sources */,
 				6BC785982CF4DC22004C0B46 /* SceneDelegate.swift in Sources */,
+				6BC785F02CF5AA75004C0B46 /* OrdersViewController.swift in Sources */,
+				6B1ACC8D2CF5C1B40081C3E5 /* OrderModel.swift in Sources */,
 				6BC785992CF4DC22004C0B46 /* RootViewController.swift in Sources */,
+				6B1ACC902CF5C2B10081C3E5 /* OrdersViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +413,7 @@
 /* Begin XCBuildConfiguration section */
 		6BC785822CF4DC1B004C0B46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDEA65D8D8FBAA0B56988421 /* Pods-Graffity.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -300,6 +443,7 @@
 		};
 		6BC785832CF4DC1B004C0B46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4D581772F76E9B5B79256E7 /* Pods-Graffity.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
