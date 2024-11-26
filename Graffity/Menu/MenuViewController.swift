@@ -21,7 +21,9 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedPortfolio(_ sender: UIButton) {
+        self.pushViewController(PortfolioViewController.self)
     }
+    
     @IBAction func clickedShoppingList(_ sender: UIButton) {
     }
     @IBAction func clickedAnalytics(_ sender: UIButton) {

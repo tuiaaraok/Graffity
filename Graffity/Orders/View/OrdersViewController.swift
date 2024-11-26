@@ -19,9 +19,6 @@ class OrdersViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         subscribe()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         viewModel.fetchOrders()
     }
     
@@ -43,6 +40,15 @@ class OrdersViewController: UIViewController {
             .store(in: &cancellables)
     }
     
+    func openOrderForm() {
+        let orderFormVC = OrderFormViewController(nibName: "OrderFormViewController", bundle: nil)
+        orderFormVC.completion = { [weak self] in
+            if let self = self {
+                self.viewModel.fetchOrders()
+            }
+        }
+    }
+    
     @IBAction func chooseType(_ sender: BaseButton) {
         sectionButtons.forEach({ $0.isSelected = false })
         sender.isSelected = true
@@ -50,7 +56,7 @@ class OrdersViewController: UIViewController {
     }
     
     @IBAction func clickedAdd(_ sender: UIButton) {
-        self.pushViewController(OrderFormViewController.self)
+        openOrderForm()
     }
     
     deinit {
@@ -81,7 +87,7 @@ extension OrdersViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         OrderFormViewModel.shared.orderModel = viewModel.orders[indexPath.section]
-        self.pushViewController(OrderFormViewController.self)
+        self.openOrderForm()
     }
 }
 

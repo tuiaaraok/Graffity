@@ -32,7 +32,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzQ-A7-lvf">
-                    <rect key="frame" x="173.66666666666666" y="86" width="46" height="49"/>
+                    <rect key="frame" x="173.66666666666666" y="83" width="46" height="49"/>
                     <fontDescription key="fontDescription" name="NozhikBold" family="Nozhik" pointSize="38"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="+ADD">
@@ -43,7 +43,7 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="HPz-Bs-DjM">
-                    <rect key="frame" x="19" y="159" width="355" height="53"/>
+                    <rect key="frame" x="19" y="156" width="355" height="53"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rvb-1e-8ok">
                             <rect key="frame" x="0.0" y="0.0" width="165.66666666666666" height="53"/>
@@ -126,14 +126,14 @@
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="euk-Xt-dIY">
-                    <rect key="frame" x="0.0" y="252" width="393" height="566"/>
+                    <rect key="frame" x="0.0" y="249" width="393" height="569"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="CXC-5L-KzN"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="zzQ-A7-lvf" firstAttribute="top" secondItem="CXC-5L-KzN" secondAttribute="top" constant="27" id="3tq-yF-f5R"/>
+                <constraint firstItem="zzQ-A7-lvf" firstAttribute="top" secondItem="CXC-5L-KzN" secondAttribute="top" constant="24" id="3tq-yF-f5R"/>
                 <constraint firstItem="CXC-5L-KzN" firstAttribute="trailing" secondItem="euk-Xt-dIY" secondAttribute="trailing" id="4Cd-w3-xcj"/>
                 <constraint firstItem="HPz-Bs-DjM" firstAttribute="leading" secondItem="CXC-5L-KzN" secondAttribute="leading" constant="19" id="5bM-5f-Sbb"/>
                 <constraint firstItem="HPz-Bs-DjM" firstAttribute="top" secondItem="zzQ-A7-lvf" secondAttribute="bottom" constant="24" id="Fjk-YT-cb6"/>

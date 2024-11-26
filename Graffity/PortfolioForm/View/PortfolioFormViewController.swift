@@ -1,5 +1,5 @@
 //
-//  OrderFormViewController.swift
+//  PortfolioFormViewController.swift
 //  Graffity
 //
 //  Created by Karen Khachatryan on 26.11.24.
@@ -10,20 +10,13 @@ import FSPagerView
 import Combine
 import PhotosUI
 
-class OrderFormViewController: UIViewController {
-
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var nameTextField: BaseTextField!
-    @IBOutlet weak var dateTextField: BaseTextField!
-    @IBOutlet weak var priceTextField: PricesTextField!
-    @IBOutlet weak var locationTextField: BaseTextField!
-    @IBOutlet weak var infoTextView: PaddingTextView!
+class PortfolioFormViewController: UIViewController {
     @IBOutlet weak var pagerView: FSPagerView!
     @IBOutlet weak var pageControl: FSPageControl!
     @IBOutlet var tapGesture: UITapGestureRecognizer!
-    @IBOutlet weak var createButton: BaseButton!
-    private let datePicker = UIDatePicker()
-    private let viewModel = OrderFormViewModel.shared
+    @IBOutlet weak var saveButton: BaseButton!
+    @IBOutlet weak var infoTextView: PaddingTextView!
+    private let viewModel = PortfolioFormViewModel.shared
     private var cancellables: Set<AnyCancellable> = []
     var completion: (() -> ())?
     
@@ -32,18 +25,10 @@ class OrderFormViewController: UIViewController {
         setupUI()
         subscribe()
     }
-
+    
     func setupUI() {
-        setNavigationTitle(title: "ADD ORDERS")
+        setNavigationTitle(title: "ADD PORTFOLIO")
         setNaviagtionBackButton(title: "cancel")
-        nameTextField.delegate = self
-        dateTextField.delegate = self
-        priceTextField.baseDelegate = self
-        locationTextField.delegate = self
-        infoTextView.delegate = self
-        infoTextView.font = .bold(size: 26)
-        pagerView.layer.borderWidth = 2
-        pagerView.layer.borderColor = UIColor.black.cgColor
         pagerView.layer.masksToBounds = true
         pagerView.dataSource = self
         pagerView.delegate = self
@@ -54,27 +39,20 @@ class OrderFormViewController: UIViewController {
         pageControl.contentHorizontalAlignment = .center
         pageControl.setFillColor(.white, for: .selected)
         pageControl.setFillColor(.black, for: .normal)
+        infoTextView.delegate = self
         tapGesture.delegate = self
-        datePicker.locale = NSLocale.current
-        datePicker.datePickerMode = .date
-        datePicker.preferredDatePickerStyle = .inline
-        datePicker.addTarget(self, action: #selector(startDatePickerValueChanged), for: .valueChanged)
-        dateTextField.inputView = datePicker
     }
     
     func subscribe() {
-        viewModel.$orderModel
+        viewModel.$portfolio
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] order in
+            .sink { [weak self] portfolio in
                 guard let self = self else { return }
-                self.nameTextField.text = order.name
-                self.dateTextField.text = order.date?.toString()
-                self.priceTextField.text = order.price?.formattedToString()
-                self.locationTextField.text = order.location
-                self.infoTextView.text = order.info
-                self.createButton.isEnabled = (order.name.checkValidation() && order.date != nil && order.price != nil && order.info.checkValidation() && order.location.checkValidation() && (UIImage(data: order.photos.first ?? Data()) != UIImage.imagePlaceholder))
-                self.pageControl.numberOfPages = order.photos.count
-                let size = (UIImage(data: order.photos.first ?? Data()) != UIImage.imagePlaceholder) ? self.pagerView.bounds.size : CGSize(width: 49, height: 25)
+                self.infoTextView.text = portfolio.info
+                let isValidPhoto = portfolio.photos.first != UIImage.imagePlaceholder.pngData()
+                self.saveButton.isEnabled = (portfolio.info.checkValidation() && isValidPhoto)
+                self.pageControl.numberOfPages = portfolio.photos.count
+                let size = isValidPhoto ? self.pagerView.bounds.size : CGSize(width: 49, height: 25)
                 self.pagerView.itemSize = size
                 self.pagerView.reloadData()
             }
@@ -101,17 +79,13 @@ class OrderFormViewController: UIViewController {
         }
         present(actionSheet, animated: true, completion: nil)
     }
-    
-    @objc func startDatePickerValueChanged() {
-        viewModel.orderModel.date = datePicker.date
-    }
 
-    @IBAction func handelTapGesture(_ sender: UITapGestureRecognizer) {
+    @IBAction func handleTapGesture(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
     
-    @IBAction func clickedCreate(_ sender: UIButton) {
-        viewModel.create { [weak self] error in
+    @IBAction func clickedSave(_ sender: BaseButton) {
+        viewModel.save { [weak self] error in
             guard let self = self else { return }
             if let error = error {
                 self.showErrorAlert(message: error.localizedDescription)
@@ -127,52 +101,15 @@ class OrderFormViewController: UIViewController {
     }
 }
 
-extension OrderFormViewController: UITextFieldDelegate, PriceTextFielddDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
-    }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return textField != dateTextField
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-    }
-    
-    func textFieldDidChangeSelection(_ textField: UITextField) {
-        switch textField {
-        case nameTextField:
-            viewModel.orderModel.name = textField.text
-        case priceTextField:
-            viewModel.orderModel.price = Double(textField.text ?? "")
-        case locationTextField:
-            viewModel.orderModel.location = textField.text
-        default:
-            break
-        }
-    }
-}
-
-extension OrderFormViewController: UITextViewDelegate {
-    
-    func textViewDidChangeSelection(_ textView: UITextView) {
-        viewModel.orderModel.info = textView.text
-    }
-}
-
-extension OrderFormViewController: FSPagerViewDataSource, FSPagerViewDelegate {
+extension PortfolioFormViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     func numberOfItems(in pagerView: FSPagerView) -> Int {
-        return viewModel.orderModel.photos.count
+        return viewModel.portfolio.photos.count
     }
     
     func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
         
-        let data = viewModel.orderModel.photos[index]
+        let data = viewModel.portfolio.photos[index]
         cell.imageView?.image = UIImage(data: data)
         return cell
     }
@@ -190,8 +127,7 @@ extension OrderFormViewController: FSPagerViewDataSource, FSPagerViewDelegate {
     }
 }
 
-
-extension OrderFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension PortfolioFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     private func requestCameraAccess() {
         let cameraStatus = AVCaptureDevice.authorizationStatus(for: .video)
         switch cameraStatus {
@@ -285,37 +221,13 @@ extension OrderFormViewController: UIImagePickerControllerDelegate, UINavigation
     }
 }
 
-extension OrderFormViewController {
-    
-    func registerKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(OrderFormViewController.keyboardNotification(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-    }
-    
-    @objc func keyboardNotification(notification: NSNotification) {
-        
-        if let userInfo = notification.userInfo {
-            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-            let duration: TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-            let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-            let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-            if (endFrame?.origin.y)! >= UIScreen.main.bounds.size.height {
-                scrollView.contentInset = .zero
-            } else {
-                let height: CGFloat = (notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)!.size.height
-                scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: height, right: 0)
-            }
-            
-            UIView.animate(withDuration: duration,
-                           delay: TimeInterval(0),
-                           options: animationCurve,
-                           animations: { self.view.layoutIfNeeded() },
-                           completion: nil)
-        }
+extension PortfolioFormViewController: UITextViewDelegate {
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        viewModel.portfolio.info = textView.text
     }
 }
 
-extension OrderFormViewController: UIGestureRecognizerDelegate {
+extension PortfolioFormViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         return !(view.hitTest(touch.location(in: view), with: nil)?.isDescendant(of: pagerView) == true)
     }

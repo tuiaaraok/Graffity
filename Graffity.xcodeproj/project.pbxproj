@@ -19,6 +19,15 @@
 		6B1ACC9D2CF5E2FA0081C3E5 /* PriceTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC9C2CF5E2F40081C3E5 /* PriceTextField.swift */; };
 		6B1ACCA02CF5E3F80081C3E5 /* OrderFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACC9F2CF5E3F80081C3E5 /* OrderFormViewModel.swift */; };
 		6B1ACCA22CF5E6040081C3E5 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCA12CF5E6040081C3E5 /* Double.swift */; };
+		6B1ACCA92CF617EB0081C3E5 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCA72CF617EB0081C3E5 /* PortfolioViewController.swift */; };
+		6B1ACCAA2CF617EB0081C3E5 /* PortfolioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1ACCA82CF617EB0081C3E5 /* PortfolioViewController.xib */; };
+		6B1ACCAE2CF618ED0081C3E5 /* PortfolioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCAD2CF618ED0081C3E5 /* PortfolioModel.swift */; };
+		6B1ACCB52CF619980081C3E5 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCB32CF619980081C3E5 /* PortfolioCollectionViewCell.swift */; };
+		6B1ACCB62CF619980081C3E5 /* PortfolioCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1ACCB42CF619980081C3E5 /* PortfolioCollectionViewCell.xib */; };
+		6B1ACCB92CF620AC0081C3E5 /* PortfolioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCB82CF620AC0081C3E5 /* PortfolioViewModel.swift */; };
+		6B1ACCBE2CF62AEE0081C3E5 /* PortfolioFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCBC2CF62AEE0081C3E5 /* PortfolioFormViewController.swift */; };
+		6B1ACCBF2CF62AEE0081C3E5 /* PortfolioFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1ACCBD2CF62AEE0081C3E5 /* PortfolioFormViewController.xib */; };
+		6B1ACCC22CF62E8B0081C3E5 /* PortfolioFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCC12CF62E8B0081C3E5 /* PortfolioFormViewModel.swift */; };
 		6BC785922CF4DC22004C0B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785872CF4DC22004C0B46 /* Assets.xcassets */; };
 		6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858B2CF4DC22004C0B46 /* LaunchScreen.storyboard */; };
 		6BC785952CF4DC22004C0B46 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858D2CF4DC22004C0B46 /* Root.storyboard */; };
@@ -59,6 +68,15 @@
 		6B1ACC9C2CF5E2F40081C3E5 /* PriceTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextField.swift; sourceTree = "<group>"; };
 		6B1ACC9F2CF5E3F80081C3E5 /* OrderFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormViewModel.swift; sourceTree = "<group>"; };
 		6B1ACCA12CF5E6040081C3E5 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		6B1ACCA72CF617EB0081C3E5 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
+		6B1ACCA82CF617EB0081C3E5 /* PortfolioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioViewController.xib; sourceTree = "<group>"; };
+		6B1ACCAD2CF618ED0081C3E5 /* PortfolioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioModel.swift; sourceTree = "<group>"; };
+		6B1ACCB32CF619980081C3E5 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
+		6B1ACCB42CF619980081C3E5 /* PortfolioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B1ACCB82CF620AC0081C3E5 /* PortfolioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewModel.swift; sourceTree = "<group>"; };
+		6B1ACCBC2CF62AEE0081C3E5 /* PortfolioFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioFormViewController.swift; sourceTree = "<group>"; };
+		6B1ACCBD2CF62AEE0081C3E5 /* PortfolioFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioFormViewController.xib; sourceTree = "<group>"; };
+		6B1ACCC12CF62E8B0081C3E5 /* PortfolioFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioFormViewModel.swift; sourceTree = "<group>"; };
 		6BC7856B2CF4DC19004C0B46 /* Graffity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graffity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC785862CF4DC22004C0B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BC785872CF4DC22004C0B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,6 +196,77 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B1ACCA52CF617CC0081C3E5 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCB72CF6209C0081C3E5 /* ViewModel */,
+				6B1ACCAC2CF618DA0081C3E5 /* Model */,
+				6B1ACCAB2CF618D40081C3E5 /* Cell */,
+				6B1ACCA62CF617D30081C3E5 /* View */,
+			);
+			path = Portfolio;
+			sourceTree = "<group>";
+		};
+		6B1ACCA62CF617D30081C3E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCA72CF617EB0081C3E5 /* PortfolioViewController.swift */,
+				6B1ACCA82CF617EB0081C3E5 /* PortfolioViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B1ACCAB2CF618D40081C3E5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCB32CF619980081C3E5 /* PortfolioCollectionViewCell.swift */,
+				6B1ACCB42CF619980081C3E5 /* PortfolioCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6B1ACCAC2CF618DA0081C3E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCAD2CF618ED0081C3E5 /* PortfolioModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B1ACCB72CF6209C0081C3E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCB82CF620AC0081C3E5 /* PortfolioViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B1ACCBA2CF62ABE0081C3E5 /* PortfolioForm */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCC02CF62E7D0081C3E5 /* ViewModel */,
+				6B1ACCBB2CF62AD30081C3E5 /* View */,
+			);
+			path = PortfolioForm;
+			sourceTree = "<group>";
+		};
+		6B1ACCBB2CF62AD30081C3E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCBC2CF62AEE0081C3E5 /* PortfolioFormViewController.swift */,
+				6B1ACCBD2CF62AEE0081C3E5 /* PortfolioFormViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B1ACCC02CF62E7D0081C3E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B1ACCC12CF62E8B0081C3E5 /* PortfolioFormViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		6BC785622CF4DC19004C0B46 = {
 			isa = PBXGroup;
 			children = (
@@ -199,11 +288,13 @@
 		6BC785902CF4DC22004C0B46 /* Graffity */ = {
 			isa = PBXGroup;
 			children = (
+				6B1ACCBA2CF62ABE0081C3E5 /* PortfolioForm */,
+				6B1ACCA52CF617CC0081C3E5 /* Portfolio */,
 				6B1ACC942CF5D39A0081C3E5 /* OrderForm */,
-				6B1ACC912CF5C3930081C3E5 /* CoreData */,
 				6BC785EC2CF5AA5C004C0B46 /* Orders */,
 				6BC785C32CF4DFB5004C0B46 /* Menu */,
 				6BC785C22CF4DF13004C0B46 /* Root */,
+				6B1ACC912CF5C3930081C3E5 /* CoreData */,
 				6BC7859B2CF4DE48004C0B46 /* Extensions */,
 				6BC785862CF4DC22004C0B46 /* AppDelegate.swift */,
 				6BC785872CF4DC22004C0B46 /* Assets.xcassets */,
@@ -347,9 +438,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC785922CF4DC22004C0B46 /* Assets.xcassets in Resources */,
+				6B1ACCBF2CF62AEE0081C3E5 /* PortfolioFormViewController.xib in Resources */,
+				6B1ACCAA2CF617EB0081C3E5 /* PortfolioViewController.xib in Resources */,
 				6BC785C62CF4DFC7004C0B46 /* MenuViewController.xib in Resources */,
 				6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */,
 				6B1ACC892CF5B7A70081C3E5 /* OrderTableViewCell.xib in Resources */,
+				6B1ACCB62CF619980081C3E5 /* PortfolioCollectionViewCell.xib in Resources */,
 				6BC785DF2CF4F15E004C0B46 /* Nozhik.otf in Resources */,
 				6B1ACC992CF5D3BA0081C3E5 /* OrderFormViewController.xib in Resources */,
 				6BC785952CF4DC22004C0B46 /* Root.storyboard in Resources */,
@@ -411,6 +505,7 @@
 				6BC785AE2CF4DE67004C0B46 /* BaseTextView.swift in Sources */,
 				6BC785AF2CF4DE67004C0B46 /* Date.swift in Sources */,
 				6BC785B02CF4DE67004C0B46 /* UITextField.swift in Sources */,
+				6B1ACCBE2CF62AEE0081C3E5 /* PortfolioFormViewController.swift in Sources */,
 				6BC785B12CF4DE67004C0B46 /* String.swift in Sources */,
 				6B1ACCA22CF5E6040081C3E5 /* Double.swift in Sources */,
 				6BC785B22CF4DE67004C0B46 /* ShadowView.swift in Sources */,
@@ -418,6 +513,7 @@
 				6B1ACC8A2CF5B7A70081C3E5 /* OrderTableViewCell.swift in Sources */,
 				6B1ACCA02CF5E3F80081C3E5 /* OrderFormViewModel.swift in Sources */,
 				6B1ACC982CF5D3BA0081C3E5 /* OrderFormViewController.swift in Sources */,
+				6B1ACCA92CF617EB0081C3E5 /* PortfolioViewController.swift in Sources */,
 				6BC785C72CF4DFC7004C0B46 /* MenuViewController.swift in Sources */,
 				6BC785B52CF4DE67004C0B46 /* BaseButton.swift in Sources */,
 				6BC785B62CF4DE67004C0B46 /* UIView.swift in Sources */,
@@ -427,13 +523,17 @@
 				6BC785B82CF4DE67004C0B46 /* ViewController.swift in Sources */,
 				6B1ACC932CF5C7060081C3E5 /* CoreDataManager.swift in Sources */,
 				6BC785962CF4DC22004C0B46 /* AppDelegate.swift in Sources */,
+				6B1ACCC22CF62E8B0081C3E5 /* PortfolioFormViewModel.swift in Sources */,
 				6BC785D52CF4F084004C0B46 /* Font.swift in Sources */,
 				6BC785972CF4DC22004C0B46 /* Graffity.xcdatamodeld in Sources */,
 				6BC785982CF4DC22004C0B46 /* SceneDelegate.swift in Sources */,
 				6BC785F02CF5AA75004C0B46 /* OrdersViewController.swift in Sources */,
 				6B1ACC8D2CF5C1B40081C3E5 /* OrderModel.swift in Sources */,
 				6BC785992CF4DC22004C0B46 /* RootViewController.swift in Sources */,
+				6B1ACCAE2CF618ED0081C3E5 /* PortfolioModel.swift in Sources */,
+				6B1ACCB52CF619980081C3E5 /* PortfolioCollectionViewCell.swift in Sources */,
 				6B1ACC902CF5C2B10081C3E5 /* OrdersViewModel.swift in Sources */,
+				6B1ACCB92CF620AC0081C3E5 /* PortfolioViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

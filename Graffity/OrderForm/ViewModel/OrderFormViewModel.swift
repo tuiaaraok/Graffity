@@ -11,7 +11,6 @@ import UIKit
 class OrderFormViewModel {
     static let shared = OrderFormViewModel()
     @Published var orderModel = OrderModel(id: UUID(), photos: [UIImage.imagePlaceholder.pngData() ?? Data()])
-//    var isAppenedImage = false
 
     private init() {}
     
@@ -23,9 +22,6 @@ class OrderFormViewModel {
         if let data = orderModel.photos.first, (UIImage(data: data) == .imagePlaceholder) {
             orderModel.photos.removeAll()
         }
-//        if !isAppenedImage {
-//            isAppenedImage = true
-//        }
         orderModel.photos.append(data)
     }
     

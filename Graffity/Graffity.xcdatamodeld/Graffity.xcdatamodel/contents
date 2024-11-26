@@ -10,4 +10,9 @@
         <attribute name="photos" optional="YES" attributeType="Transformable" customClassName="[Data]"/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Portfolio" representedClassName="Portfolio" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="info" optional="YES" attributeType="String"/>
+        <attribute name="photos" optional="YES" attributeType="Transformable" customClassName="[Data]"/>
+    </entity>
 </model>

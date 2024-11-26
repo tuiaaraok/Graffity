@@ -80,6 +80,39 @@ class CoreDataManager {
         }
     }
     
+    func savePortfolio(portfolioModel: PortfolioModel, completion: @escaping (Error?) -> Void) {
+        let id = portfolioModel.id
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Portfolio> = Portfolio.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+            
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                let portfolio: Portfolio
+                
+                if let existingPortfolio = results.first {
+                    portfolio = existingPortfolio
+                } else {
+                    portfolio = Portfolio(context: backgroundContext)
+                    portfolio.id = id
+                }
+                    
+                portfolio.info = portfolioModel.info
+                portfolio.photos = portfolioModel.photos
+                
+                try backgroundContext.save()
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(error)
+                }
+            }
+        }
+    }
+    
     func confirmOrder(id: UUID, completion: @escaping (Error?) -> Void) {
         let backgroundContext = persistentContainer.newBackgroundContext()
         backgroundContext.perform {
@@ -105,32 +138,27 @@ class CoreDataManager {
         }
     }
     
-//    func removeProduct(by id: UUID, completion: @escaping (Error?) -> Void) {
-//        let backgroundContext = persistentContainer.newBackgroundContext()
-//        backgroundContext.perform {
-//            let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
-//            fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
-//            
-//            do {
-//                let results = try backgroundContext.fetch(fetchRequest)
-//                if let productToDelete = results.first {
-//                    backgroundContext.delete(productToDelete)
-//                    try backgroundContext.save()
-//                    DispatchQueue.main.async {
-//                        completion(nil)
-//                    }
-//                } else {
-//                    DispatchQueue.main.async {
-//                        completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Product not found"]))
-//                    }
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    completion(error)
-//                }
-//            }
-//        }
-//    }
+    func fetchPortfolio(completion: @escaping ([PortfolioModel], Error?) -> Void) {
+        let backgroundContext = persistentContainer.newBackgroundContext()
+        backgroundContext.perform {
+            let fetchRequest: NSFetchRequest<Portfolio> = Portfolio.fetchRequest()
+            do {
+                let results = try backgroundContext.fetch(fetchRequest)
+                var portfolioModels: [PortfolioModel] = []
+                for result in results {
+                    let portfolioModel = PortfolioModel(id: result.id ?? UUID(), photos: result.photos ?? [], info: result.info)
+                    portfolioModels.append(portfolioModel)
+                }
+                DispatchQueue.main.async {
+                    completion(portfolioModels, nil)
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion([], error)
+                }
+            }
+        }
+    }
 
 }
 
