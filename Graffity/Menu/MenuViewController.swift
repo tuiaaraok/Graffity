@@ -13,7 +13,12 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sectionButtons.forEach({ $0.titleLabel?.font = .regularBarse(size: 38) })
+        for button in sectionButtons {
+            button.titleLabel?.font = .regularBarse(size: 38)
+            button.titleLabel?.numberOfLines = 1
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.titleLabel?.lineBreakMode = .byClipping
+        }
     }
 
     @IBAction func clickedOrders(_ sender: UIButton) {

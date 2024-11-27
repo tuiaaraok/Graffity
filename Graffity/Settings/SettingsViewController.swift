@@ -14,7 +14,12 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNaviagtionBackButton(title: "Back")
-        settingButtons.forEach({ $0.titleLabel?.font = .regularBarse(size: 38)})
+        for button in settingButtons {
+            button.titleLabel?.font = .regularBarse(size: 38)
+            button.titleLabel?.numberOfLines = 1
+            button.titleLabel?.adjustsFontSizeToFitWidth = true
+            button.titleLabel?.lineBreakMode = .byClipping
+        }
     }
     
     @IBAction func clickedContactUs(_ sender: UIButton) {

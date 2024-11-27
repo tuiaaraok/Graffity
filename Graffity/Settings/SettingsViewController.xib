@@ -74,6 +74,7 @@
                 <constraint firstAttribute="bottom" secondItem="nrA-hK-Pa2" secondAttribute="bottom" id="e5E-vb-NfP"/>
                 <constraint firstAttribute="trailing" secondItem="nrA-hK-Pa2" secondAttribute="trailing" id="mVv-8O-TUc"/>
                 <constraint firstItem="14f-mA-eVq" firstAttribute="leading" secondItem="mvF-Rh-Nor" secondAttribute="leading" constant="16" id="pRh-Rx-92Z"/>
+                <constraint firstItem="mvF-Rh-Nor" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="14f-mA-eVq" secondAttribute="trailing" constant="8" id="vIw-iP-JEg"/>
             </constraints>
             <point key="canvasLocation" x="-31.297709923664122" y="19.718309859154932"/>
         </view>
