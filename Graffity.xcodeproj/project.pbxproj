@@ -40,6 +40,10 @@
 		6B1ACCDE2CF659180081C3E5 /* ShoppingFormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1ACCDC2CF659180081C3E5 /* ShoppingFormTableViewCell.xib */; };
 		6B1ACCE12CF65C5D0081C3E5 /* ShoppingFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCE02CF65C5D0081C3E5 /* ShoppingFormViewModel.swift */; };
 		6B1ACCE32CF66A320081C3E5 /* CheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1ACCE22CF66A320081C3E5 /* CheckBoxButton.swift */; };
+		6B542D162CF6790E007877B6 /* AnalyticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B542D152CF6790E007877B6 /* AnalyticsViewController.xib */; };
+		6B542D172CF6790E007877B6 /* AnalyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542D142CF6790E007877B6 /* AnalyticsViewController.swift */; };
+		6B542D1A2CF6844E007877B6 /* AnalyticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542D192CF6844E007877B6 /* AnalyticsViewModel.swift */; };
+		6B542D1D2CF6847F007877B6 /* AnalyticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B542D1C2CF6847F007877B6 /* AnalyticsModel.swift */; };
 		6BC785922CF4DC22004C0B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BC785872CF4DC22004C0B46 /* Assets.xcassets */; };
 		6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858B2CF4DC22004C0B46 /* LaunchScreen.storyboard */; };
 		6BC785952CF4DC22004C0B46 /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BC7858D2CF4DC22004C0B46 /* Root.storyboard */; };
@@ -101,6 +105,10 @@
 		6B1ACCDC2CF659180081C3E5 /* ShoppingFormTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShoppingFormTableViewCell.xib; sourceTree = "<group>"; };
 		6B1ACCE02CF65C5D0081C3E5 /* ShoppingFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingFormViewModel.swift; sourceTree = "<group>"; };
 		6B1ACCE22CF66A320081C3E5 /* CheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxButton.swift; sourceTree = "<group>"; };
+		6B542D142CF6790E007877B6 /* AnalyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewController.swift; sourceTree = "<group>"; };
+		6B542D152CF6790E007877B6 /* AnalyticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalyticsViewController.xib; sourceTree = "<group>"; };
+		6B542D192CF6844E007877B6 /* AnalyticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsViewModel.swift; sourceTree = "<group>"; };
+		6B542D1C2CF6847F007877B6 /* AnalyticsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsModel.swift; sourceTree = "<group>"; };
 		6BC7856B2CF4DC19004C0B46 /* Graffity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graffity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BC785862CF4DC22004C0B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BC785872CF4DC22004C0B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -372,6 +380,41 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		6B542D122CF678EC007877B6 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				6B542D1B2CF68470007877B6 /* Model */,
+				6B542D182CF6843D007877B6 /* ViewModel */,
+				6B542D132CF678FB007877B6 /* View */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		6B542D132CF678FB007877B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6B542D142CF6790E007877B6 /* AnalyticsViewController.swift */,
+				6B542D152CF6790E007877B6 /* AnalyticsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6B542D182CF6843D007877B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6B542D192CF6844E007877B6 /* AnalyticsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6B542D1B2CF68470007877B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6B542D1C2CF6847F007877B6 /* AnalyticsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6BC785622CF4DC19004C0B46 = {
 			isa = PBXGroup;
 			children = (
@@ -393,6 +436,7 @@
 		6BC785902CF4DC22004C0B46 /* Graffity */ = {
 			isa = PBXGroup;
 			children = (
+				6B542D122CF678EC007877B6 /* Analytics */,
 				6B1ACCD42CF6551B0081C3E5 /* ShoppingForm */,
 				6B1ACCC32CF6454A0081C3E5 /* ShoppingList */,
 				6B1ACCBA2CF62ABE0081C3E5 /* PortfolioForm */,
@@ -552,6 +596,7 @@
 				6BC785C62CF4DFC7004C0B46 /* MenuViewController.xib in Resources */,
 				6BC785942CF4DC22004C0B46 /* LaunchScreen.storyboard in Resources */,
 				6B1ACC892CF5B7A70081C3E5 /* OrderTableViewCell.xib in Resources */,
+				6B542D162CF6790E007877B6 /* AnalyticsViewController.xib in Resources */,
 				6B1ACCC82CF645810081C3E5 /* ShoppingListViewController.xib in Resources */,
 				6B1ACCB62CF619980081C3E5 /* PortfolioCollectionViewCell.xib in Resources */,
 				6BC785DF2CF4F15E004C0B46 /* Nozhik.otf in Resources */,
@@ -625,11 +670,13 @@
 				6B1ACCA22CF5E6040081C3E5 /* Double.swift in Sources */,
 				6BC785B22CF4DE67004C0B46 /* ShadowView.swift in Sources */,
 				6BC785B32CF4DE67004C0B46 /* PaddingTextView.swift in Sources */,
+				6B542D172CF6790E007877B6 /* AnalyticsViewController.swift in Sources */,
 				6B1ACC8A2CF5B7A70081C3E5 /* OrderTableViewCell.swift in Sources */,
 				6B1ACCA02CF5E3F80081C3E5 /* OrderFormViewModel.swift in Sources */,
 				6B1ACC982CF5D3BA0081C3E5 /* OrderFormViewController.swift in Sources */,
 				6B1ACCC72CF645810081C3E5 /* ShoppingListViewController.swift in Sources */,
 				6B1ACCA92CF617EB0081C3E5 /* PortfolioViewController.swift in Sources */,
+				6B542D1A2CF6844E007877B6 /* AnalyticsViewModel.swift in Sources */,
 				6BC785C72CF4DFC7004C0B46 /* MenuViewController.swift in Sources */,
 				6BC785B52CF4DE67004C0B46 /* BaseButton.swift in Sources */,
 				6BC785B62CF4DE67004C0B46 /* UIView.swift in Sources */,
@@ -650,6 +697,7 @@
 				6B1ACCE12CF65C5D0081C3E5 /* ShoppingFormViewModel.swift in Sources */,
 				6BC785992CF4DC22004C0B46 /* RootViewController.swift in Sources */,
 				6B1ACCAE2CF618ED0081C3E5 /* PortfolioModel.swift in Sources */,
+				6B542D1D2CF6847F007877B6 /* AnalyticsModel.swift in Sources */,
 				6B1ACCB52CF619980081C3E5 /* PortfolioCollectionViewCell.swift in Sources */,
 				6B1ACCD22CF649230081C3E5 /* ShoppingListTableViewCell.swift in Sources */,
 				6B1ACC902CF5C2B10081C3E5 /* OrdersViewModel.swift in Sources */,

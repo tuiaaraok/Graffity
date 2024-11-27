@@ -215,6 +215,7 @@ class CoreDataManager {
                     shopping.name = shoppingModel.name
                     shopping.price = shoppingModel.price ?? 0
                     shopping.isCompleted = shoppingModel.isCompleted
+                    shopping.date = shoppingModel.date
                 }
                 
                 try backgroundContext.save()
@@ -239,7 +240,7 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 var shoppingsModel: [ShoppingModel] = []
                 for result in results {
-                    let shoppingModel = ShoppingModel(id: result.id ?? UUID(), name: result.name, price: result.price, isCompleted: result.isCompleted)
+                    let shoppingModel = ShoppingModel(id: result.id ?? UUID(), name: result.name, price: result.price, date: result.date ?? Date(), isCompleted: result.isCompleted)
                     shoppingsModel.append(shoppingModel)
                 }
                 DispatchQueue.main.async {
@@ -263,6 +264,7 @@ class CoreDataManager {
                 let results = try backgroundContext.fetch(fetchRequest)
                 if let shopping = results.first {
                     shopping.isCompleted = isCompleted
+                    shopping.date = Date()
                 } else {
                     completion(NSError(domain: "CoreDataManager", code: 404, userInfo: [NSLocalizedDescriptionKey: "Order not found"]))
                 }

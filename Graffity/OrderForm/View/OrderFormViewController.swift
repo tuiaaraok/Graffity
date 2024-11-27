@@ -150,7 +150,7 @@ extension OrderFormViewController: UITextFieldDelegate, PriceTextFielddDelegate 
         case nameTextField:
             viewModel.orderModel.name = textField.text
         case priceTextField:
-            viewModel.orderModel.price = Double(textField.text ?? "")
+            viewModel.orderModel.price = priceTextField.formatNumber()
         case locationTextField:
             viewModel.orderModel.location = textField.text
         default:

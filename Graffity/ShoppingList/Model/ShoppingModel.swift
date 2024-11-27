@@ -11,5 +11,6 @@ struct ShoppingModel {
     var id: UUID
     var name: String?
     var price: Double?
+    var date: Date = Date()
     var isCompleted: Bool = false
 }

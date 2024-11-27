@@ -29,6 +29,7 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func clickedAnalytics(_ sender: UIButton) {
+        self.pushViewController(AnalyticsViewController.self)
     }
     @IBAction func clickedSettings(_ sender: UIButton) {
     }

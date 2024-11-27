@@ -117,7 +117,9 @@ extension ShoppingFormViewController: ShoppingFormTableViewCellDelegate {
     
     func changePrice(cell: UITableViewCell, value: String?) {
         if let indexPath = shoppingsTableView.indexPath(for: cell) {
-            viewModel.shoppings[indexPath.section].price = Double(value ?? "")
+            if let textWithoutSpaces = value?.components(separatedBy: .whitespacesAndNewlines).joined() {
+                viewModel.shoppings[indexPath.section].price = Double(textWithoutSpaces)
+            }
         }
     }
 }

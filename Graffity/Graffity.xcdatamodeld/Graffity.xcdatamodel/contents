@@ -16,6 +16,7 @@
         <attribute name="photos" optional="YES" attributeType="Transformable" customClassName="[Data]"/>
     </entity>
     <entity name="Shopping" representedClassName="Shopping" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="isCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
