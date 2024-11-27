@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingsViewController" customModule="Graffity" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="settingButtons" destination="rHc-LC-gxZ" collectionClass="NSMutableArray" id="3fS-0Y-8vG"/>
+                <outletCollection property="settingButtons" destination="pgj-vC-Zhz" collectionClass="NSMutableArray" id="Rel-vc-UCa"/>
+                <outletCollection property="settingButtons" destination="S9o-mK-mLo" collectionClass="NSMutableArray" id="zXC-hZ-kJc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="nrA-hK-Pa2">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="14f-mA-eVq">
+                    <rect key="frame" x="16" y="209" width="145" height="147"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHc-LC-gxZ">
+                            <rect key="frame" x="0.0" y="0.0" width="145" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="CONTACT US">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedContactUs:" destination="-1" eventType="touchUpInside" id="6sn-Ac-SXq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgj-vC-Zhz">
+                            <rect key="frame" x="0.0" y="57" width="145" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="PRIVACY POLICY">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedPrivacyPolicy:" destination="-1" eventType="touchUpInside" id="XK5-o2-SpJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9o-mK-mLo">
+                            <rect key="frame" x="0.0" y="114" width="145" height="33"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="RATE US">
+                                <color key="titleColor" name="grayBlue"/>
+                            </state>
+                            <connections>
+                                <action selector="clickedRateUs:" destination="-1" eventType="touchUpInside" id="9v4-0h-SqR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="mvF-Rh-Nor"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="14f-mA-eVq" firstAttribute="top" secondItem="mvF-Rh-Nor" secondAttribute="top" constant="150" id="3BG-bz-Fm9"/>
+                <constraint firstItem="nrA-hK-Pa2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="NoG-iC-329"/>
+                <constraint firstItem="nrA-hK-Pa2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XPw-rb-Fa3"/>
+                <constraint firstAttribute="bottom" secondItem="nrA-hK-Pa2" secondAttribute="bottom" id="e5E-vb-NfP"/>
+                <constraint firstAttribute="trailing" secondItem="nrA-hK-Pa2" secondAttribute="trailing" id="mVv-8O-TUc"/>
+                <constraint firstItem="14f-mA-eVq" firstAttribute="leading" secondItem="mvF-Rh-Nor" secondAttribute="leading" constant="16" id="pRh-Rx-92Z"/>
+            </constraints>
+            <point key="canvasLocation" x="-31.297709923664122" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="402" height="874"/>
+        <namedColor name="grayBlue">
+            <color red="0.74099999666213989" green="0.85900002717971802" blue="0.85500001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
